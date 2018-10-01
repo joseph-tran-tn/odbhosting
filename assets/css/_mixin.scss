@@ -223,8 +223,8 @@ $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
 	}
 }
 
-@mixin add_prefix ($key, $value) {
-	@each $prefix in $browser_prefix {
-		#{$prefix}$key: $value;
-	}
-}
+// @mixin add_prefix ($key, $value) {
+// 	@each $prefix in $browser_prefix {
+// 		#{$prefix}$key: $value;
+// 	}
+// }

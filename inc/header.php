@@ -37,8 +37,26 @@
 				<div class="mainMenu__inner__inner">
 					<a href="./" class="logo"><img src="<?php echo APP_ASSETS ?>img/logo.png" alt=""></a>
 					<ul class="mainMenu__ul">
-						<li><a id="nav-domain" href="./domain.php">Tên miền</a></li>
-						<li><a id="nav-hosting" href="./hosting.php">Web Hosting</a></li>
+						<li>
+							<a id="nav-domain" href="./domain.php">Tên miền</a>
+							<ul class="mainMenu__ul__sub">
+								<li><a href="">Đăng ký tên miền</a></li>
+								<li><a href="">Quản lý tên miền</a></li>
+								<li><a href="">Bảo mật tên miền</a></li>
+								<li><a href="">Chuyển tên miền về ODB.vn</a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="nav-hosting" href="./hosting.php">Web Hosting</a>
+							<ul class="mainMenu__ul__sub mainMenu__ul__sub__two">
+								<li><a href="">Web Hosting</a></li>
+								<li><a href="">Wordpress Hosting</a></li>
+								<li><a href="">SEO Hosting</a></li>
+								<li><a href="">XenForo Hosting</a></li>
+								<li><a href="">Đại lý Hosting</a></li>
+								<li><a href="">Nukeviet Hosting</a></li>
+							</ul>
+						</li>
 						<li><a id="nav-server" href="./server.php">Máy chủ</a></li>
 						<li><a id="nav-website" href="./website.php">Website</a></li>
 						<li><a id="nav-secure" href="./secure.php">Bảo mật</a></li>

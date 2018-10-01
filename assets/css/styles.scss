@@ -82,13 +82,31 @@ body {font-family: 'Montserrat', sans-serif; color: #747474;}
 		.logo {display: block; float: left; padding: 10px 0;
 			img {display: block;}
 		}
-		&__ul {float: right; font-size: 0;
-			> li {display: inline-block; vertical-align: middle;
+		&__ul {float: right; font-size: 0; margin-bottom: -6px;
+			> li {display: inline-block; vertical-align: middle; position: relative; padding-bottom: 6px;
 				> a {display: block; font-size: 16px; color: #747474; text-transform: uppercase; line-height: 62px; padding: 0 15px; font-weight: bold;
 					&:hover {background: #f0f0f0;}
 				}
 				&:last-child {
 					> a {border-radius: 0 6px 6px 0;}
+				}
+				&:hover {
+					.mainMenu__ul__sub {display: block;}
+				}
+			}
+			&__sub {background: #fff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 5px 10px rgba(0,0,0,.4); position: absolute; top: 100%; left: 0; font-size: 14px; line-height: 30px; display: none;
+				li {
+					a {display: block; white-space: nowrap; font-weight: bold; color: #747474; position: relative; transition: 0.3s ease all; min-width: 240px;
+						&:before {content: ""; display: inline-block; vertical-align: middle; width: 5px; height: 5px; border-top: 1px solid #f15a38; border-right: 1px solid #f15a38; transform: rotate(45deg); top: 10px; position: absolute; left: 0; opacity: 0; transition: 0.3s ease all;}
+						&.active, &:hover {color: #f15a38; padding-left: 15px;
+							&:before {opacity: 1;}
+						}
+					}
+				}
+				&__two {@include clearfix(); width: 360px;
+					li {float: left; width: 50%;
+						a {min-width: 0;}
+					}
 				}
 			}
 		}
@@ -452,7 +470,14 @@ main {min-height: calc(100vh - 811px);
 	#nav-hosting {background: #959a9b; color: #fff; position: relative;
 		&:after {content: ""; display: block; height: 6px; position: absolute; top: 100%; left: 0; width: 100%; background: #666; transform: skew(-20deg);}
 	}
-	.section01 {padding: 50px 0 0;}
+	.section01 {padding: 50px 0 0;
+		&__intro {margin: 45px 0;
+			&__img {float: left; width: 570px;
+				img {display: block; margin: 0 auto;}
+			}
+			&__text {overflow: hidden; line-height: 1.7;}
+		}
+	}
 	.footer {}
 }
 
