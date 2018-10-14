@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="promotePage" class="promotePage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">KHUYẾN MÃI</div>
@@ -29,6 +28,6 @@ Khuyến mãi Black Friday của ODB kéo dài từ ngày 23/11/2015 cho đến 
 				</div>
 			</div>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
 </body>
 </html>

@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="serverPage" class="serverPage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">THUÊ MÁY CHỦ RIÊNG TẠI VIỆT NAM</div>
@@ -18,6 +17,6 @@ quản trị miễn phí với đội ngũ hỗ trợ chuyên nghiệp</div>
 			<div class="section01__subTitle subTitle">Dịch vụ thuê máy chủ chất lượng</div>
 		</section>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
 </body>
 </html>

@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="domainPage" class="domainPage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">DỊCH VỤ ĐĂNG KÝ TÊN MIỀN - MUA TÊN MIỀN GIÁ RẺ</div>
@@ -248,6 +247,16 @@ Tên miền giá rẻ khuyến mãi thường xuyên</div>
 			</div>
 		</section>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
+	<script>
+		$(".selectBoxs__action__selectAll").click(function(){
+			$(".selectBoxs ul input").prop('checked', true)
+			return false;
+		})
+		$(".selectBoxs__action__reset").click(function(){
+			$(".selectBoxs ul input").prop('checked', false)
+			return false;
+		})
+	</script>
 </body>
 </html>

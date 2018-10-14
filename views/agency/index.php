@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="agencyPage" class="agencyPage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">ĐẠI LÝ KÝ QUỸ</div>
@@ -19,6 +18,6 @@ ODB.vn cung cấp các dịch vụ chất lượng và đội ngũ kỹ thuật 
 mà ODB.vn cung cấp với giá riêng của mình, chiết khấu đến 50% giá trị dịch vụ.</div>
 		</section>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
 </body>
 </html>

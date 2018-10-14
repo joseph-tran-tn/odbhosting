@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="hostingPage" class="hostingPage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">ĐẠI LÝ HOSTING</div>
@@ -28,6 +27,6 @@ và công nghệ Litespeed + CloudLinux tăng tốc website của bạn gấp nh
 			</div>
 		</section>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
 </body>
 </html>

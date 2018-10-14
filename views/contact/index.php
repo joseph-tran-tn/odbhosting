@@ -1,11 +1,10 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'inc/head.php' ?>
+	<?php include TEMPLATEPATH . '/inc/head.php' ?>
 </head>
 <body id="contactPage" class="contactPage">
-	<?php include 'inc/header.php' ?>
+	<?php include TEMPLATEPATH . '/inc/header.php' ?>
 	<main>
 		<div class="mainHeader">
 			<div class="mainHeader__title">LIÊN HỆ ODB.VN</div>
@@ -17,6 +16,6 @@
 			<div class="section01__subTitle subTitle">Hỗ trợ chuyên nghiệp với 24 giờ / ngày, 7 ngày một tuần!</div>
 		</section>
 	</main>
-	<?php include 'inc/footer.php' ?>
+	<?php include TEMPLATEPATH . '/inc/footer.php' ?>
 </body>
 </html>

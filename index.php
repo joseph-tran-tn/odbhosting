@@ -1,4 +1,3 @@
-<?php include 'config.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -439,5 +438,15 @@
 		</div>
 	</div>
 	<?php include 'inc/footer.php' ?>
+	<script>
+		$(".selectBoxs__action__selectAll").click(function(){
+			$(".selectBoxs ul input").prop('checked', true)
+			return false;
+		})
+		$(".selectBoxs__action__reset").click(function(){
+			$(".selectBoxs ul input").prop('checked', false)
+			return false;
+		})
+	</script>
 </body>
 </html>

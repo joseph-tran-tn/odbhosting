@@ -35,10 +35,10 @@
 		<div class="container">
 			<div class="mainMenu__inner">
 				<div class="mainMenu__inner__inner">
-					<a href="./" class="logo"><img src="<?php echo APP_ASSETS ?>img/logo.png" alt=""></a>
+					<a href="<?php echo APP_URL ?>" class="logo"><img src="<?php echo APP_ASSETS ?>img/logo.png" alt=""></a>
 					<ul class="mainMenu__ul">
 						<li>
-							<a id="nav-domain" href="./domain.php">Tên miền</a>
+							<a id="nav-domain" href="<?php echo APP_URL ?>domain/">Tên miền</a>
 							<ul class="mainMenu__ul__sub">
 								<li><a href="">Đăng ký tên miền</a></li>
 								<li><a href="">Quản lý tên miền</a></li>
@@ -47,7 +47,7 @@
 							</ul>
 						</li>
 						<li>
-							<a id="nav-hosting" href="./hosting.php">Web Hosting</a>
+							<a id="nav-hosting" href="<?php echo APP_URL ?>hosting/">Web Hosting</a>
 							<ul class="mainMenu__ul__sub mainMenu__ul__sub__two">
 								<li><a href="">Web Hosting</a></li>
 								<li><a href="">Wordpress Hosting</a></li>
@@ -57,12 +57,12 @@
 								<li><a href="">Nukeviet Hosting</a></li>
 							</ul>
 						</li>
-						<li><a id="nav-server" href="./server.php">Máy chủ</a></li>
-						<li><a id="nav-website" href="./website.php">Website</a></li>
-						<li><a id="nav-secure" href="./secure.php">Bảo mật</a></li>
-						<li><a id="nav-agency" href="./agency.php">Đại lý</a></li>
-						<li><a id="nav-promote" href="./promote.php">Khuyến mãi</a></li>
-						<li><a id="nav-contact" href="./contact.php">Liên hệ</a></li>
+						<li><a id="nav-server" href="<?php echo APP_URL ?>server/">Máy chủ</a></li>
+						<li><a id="nav-website" href="<?php echo APP_URL ?>website/">Website</a></li>
+						<li><a id="nav-secure" href="<?php echo APP_URL ?>secure/">Bảo mật</a></li>
+						<li><a id="nav-agency" href="<?php echo APP_URL ?>agency/">Đại lý</a></li>
+						<li><a id="nav-promote" href="<?php echo APP_URL ?>promote/">Khuyến mãi</a></li>
+						<li><a id="nav-contact" href="<?php echo APP_URL ?>contact/">Liên hệ</a></li>
 					</ul>
 				</div>
 			</div>
