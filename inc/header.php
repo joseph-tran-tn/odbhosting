@@ -38,31 +38,55 @@
 					<a href="<?php echo APP_URL ?>" class="logo"><img src="<?php echo APP_ASSETS ?>img/logo.png" alt=""></a>
 					<ul class="mainMenu__ul">
 						<li>
-							<a id="nav-domain" href="<?php echo APP_URL ?>domain/">Tên miền</a>
-							<ul class="mainMenu__ul__sub">
+							<a id="nav-domain" href="<?php echo get_the_permalink(20) ?>">Tên miền</a>
+							<!-- <ul class="mainMenu__ul__sub">
 								<li><a href="">Đăng ký tên miền</a></li>
 								<li><a href="">Quản lý tên miền</a></li>
 								<li><a href="">Bảo mật tên miền</a></li>
 								<li><a href="">Chuyển tên miền về ODB.vn</a></li>
-							</ul>
+							</ul> -->
 						</li>
 						<li>
-							<a id="nav-hosting" href="<?php echo APP_URL ?>hosting/">Web Hosting</a>
-							<ul class="mainMenu__ul__sub mainMenu__ul__sub__two">
+							<a id="nav-hosting" href="<?php echo get_the_permalink(22) ?>">Web Hosting</a>
+							<!-- <ul class="mainMenu__ul__sub mainMenu__ul__sub__two">
 								<li><a href="">Web Hosting</a></li>
 								<li><a href="">Wordpress Hosting</a></li>
 								<li><a href="">SEO Hosting</a></li>
 								<li><a href="">XenForo Hosting</a></li>
 								<li><a href="">Đại lý Hosting</a></li>
 								<li><a href="">Nukeviet Hosting</a></li>
-							</ul>
+							</ul> -->
 						</li>
-						<li><a id="nav-server" href="<?php echo APP_URL ?>server/">Máy chủ</a></li>
-						<li><a id="nav-website" href="<?php echo APP_URL ?>website/">Website</a></li>
-						<li><a id="nav-secure" href="<?php echo APP_URL ?>secure/">Bảo mật</a></li>
-						<li><a id="nav-agency" href="<?php echo APP_URL ?>agency/">Đại lý</a></li>
-						<li><a id="nav-promote" href="<?php echo APP_URL ?>promote/">Khuyến mãi</a></li>
-						<li><a id="nav-contact" href="<?php echo APP_URL ?>contact/">Liên hệ</a></li>
+						<li><a id="nav-server" href="<?php echo get_the_permalink(24) ?>">Máy chủ</a>
+							<!-- <ul class="mainMenu__ul__sub mainMenu__ul__sub__two mainMenu__ul__sub--server">
+								<li><a href="">VPS Giá rẻ</a></li>
+								<li><a href="">Chỗ đặt máy chủ</a></li>
+								<li><a href="">SSD VPS PRO</a></li>
+								<li><a href="">Tài liệu kỹ thuật VPS</a></li>
+								<li><a href="">Thuê máy chủ tại Việt Nam</a></li>
+								<li><a href="">Giải pháp công nghệ</a></li>
+								<li><a href="">Thuê máy chủ nước ngoài</a></li>
+								<li><a href="">Video streaming, Caching, Web cluster</a></li>
+								<li><a href="">Thuê máy chủ giá sốc</a></li>
+							</ul> -->
+						</li>
+						<li><a id="nav-website" href="<?php echo get_the_permalink(36) ?>">Website</a>
+							<!-- <ul class="mainMenu__ul__sub">
+								<li><a href="">Thiết kế website</a></li>
+								<li><a href="">Website doanh nghiệp</a></li>
+								<li><a href="">Website bán hàng</a></li>
+								<li><a href="">Website theo yêu cầu</a></li>
+							</ul> -->
+						</li>
+						<li><a id="nav-secure" href="<?php echo get_the_permalink(34) ?>">Bảo mật</a></li>
+						<li><a id="nav-agency" href="<?php echo get_the_permalink(28) ?>">Đại lý</a>
+							<!-- <ul class="mainMenu__ul__sub">
+								<li><a href="">Đại lý ký quỹ</a></li>
+								<li><a href="">Tiếp thị liên kết Affiliate</a></li>
+							</ul> -->
+						</li>
+						<li><a id="nav-promote" href="<?php echo APP_URL ?>promotion/">Khuyến mãi</a></li>
+						<li><a id="nav-contact" href="<?php echo get_the_permalink(32) ?>">Liên hệ</a></li>
 					</ul>
 				</div>
 			</div>

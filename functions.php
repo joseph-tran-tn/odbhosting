@@ -36,7 +36,7 @@ function custom_login_logo() {
 }
 add_action('login_head', 'custom_login_logo');
 function remove_footer_admin () {
-    echo '<span id="footer-thankyou">Developed by <a href="https://alive-web.vn" target="_blank">Alive Vietnam</a></span>';
+    echo '<span id="footer-thankyou">Developed by <a href="http://trantuananh.info" target="_blank">ANHTN</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 function new_wp_login_url() {
@@ -68,7 +68,7 @@ function thumbCrop( $img = '', $w = false, $h = false , $zc = 1, $a = false, $cc
 	$a  = ($a)  ? "&amp;a=$a"   : "";
 	$cc = ($cc) ? "&amp;cc=$cc" : "";	
 	$img = str_replace(get_bloginfo('url'), '', $img);
-	return THEME_DIR . "/timthumb/timthumb.php?src={$img}{$h}{$w}&amp;zc={$zc}{$a}{$cc}";
+	return THEME_DIR . "/inc/timthumb.php?src={$img}{$h}{$w}&amp;zc={$zc}{$a}{$cc}";
 }
 
 /**
@@ -121,3 +121,7 @@ function stop_reordering_my_categories($args) {
   return $args;
 }
 add_filter('wp_terms_checklist_args','stop_reordering_my_categories');
+
+function numF($num) {
+	return number_format($num, 0, ',', '.');
+}

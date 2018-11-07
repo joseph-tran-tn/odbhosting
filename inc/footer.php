@@ -17,7 +17,7 @@
 			<div class="blockF block02">
 				<div class="blockF__title">Thông Tin Công Ty</div>
 				<ul>
-					<li><a href="<?php echo APP_URL ?>about/">Giới thiệu ODB.vn</a></li>
+					<li><a href="<?php echo get_the_permalink(26) ?>">Giới thiệu ODB.vn</a></li>
 					<li><a href="<?php echo APP_URL ?>">Giá trị văn hóa ODB.vn</a></li>
 					<li><a href="<?php echo APP_URL ?>">Thương hiệu ODB.vn</a></li>
 					<li><a href="<?php echo APP_URL ?>">Tin tức</a></li>
@@ -29,11 +29,11 @@
 			<div class="blockF block02">
 				<div class="blockF__title">Chính sách</div>
 				<ul>
-					<li><a href="<?php echo APP_URL ?>terms/">Quy định sử dụng</a></li>
-					<li><a href="<?php echo APP_URL ?>privacy/">Chính sách riêng tư</a></li>
-					<li><a href="<?php echo APP_URL ?>security/">Chính sách bảo mật</a></li>
-					<li><a href="<?php echo APP_URL ?>refund/">Chính sách hoàn tiền</a></li>
-					<li><a href="<?php echo APP_URL ?>billing/">Hướng dẫn thanh toán</a></li>
+					<li><a href="<?php echo get_the_permalink(13) ?>">Quy định sử dụng</a></li>
+					<li><a href="<?php echo get_the_permalink(15) ?>">Chính sách riêng tư</a></li>
+					<li><a href="<?php echo get_the_permalink(3) ?>">Chính sách bảo mật</a></li>
+					<li><a href="<?php echo get_the_permalink(47) ?>">Chính sách hoàn tiền</a></li>
+					<li><a href="<?php echo get_the_permalink(30) ?>">Hướng dẫn thanh toán</a></li>
 					<li><a href="<?php echo APP_URL ?>server-management/">Dịch vụ quản trị máy chủ</a></li>
 					<li><a href="<?php echo APP_URL ?>security-check/">Kiểm tra bảo mật</a></li>
 				</ul>
@@ -88,4 +88,5 @@
 </div>
 <a class="chatBottom" href=""><img src="<?php echo APP_ASSETS ?>img/chat.png" alt=""></a>
 
-<script src="<?php echo APP_ASSETS; ?>js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo APP_ASSETS; ?>js/jquery-1.12.4.min.js"></script>
+<script src="<?php echo APP_ASSETS; ?>js/jquery.matchHeight.min.js"></script>
