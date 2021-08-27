@@ -21,95 +21,39 @@ quản trị miễn phí với đội ngũ hỗ trợ chuyên nghiệp</div>
 					<div class="section01__img">
 						<img src="<?php echo APP_ASSETS ?>img/server/img01.jpg" alt="">
 					</div>
-					<div class="section01__text">ODB.vn cung cấp dịch vụ thuê máy chủ chất lượng, phần cứng chính hãng cùng trung tâm dữ liệu tốt nhất Việt Nam.<br><br>
-						Hệ thống mạng ổn định kèm đội ngũ hỗ trợ chuyên nghiệp. Đảm bảo uptime 99,9%. Website hoặc ứng dụng của bạn sẽ hoạt động hiệu năng, ổn định và bảo mật.<br><br>
-					Sử dụng dịch vụ thuê máy chủ tại ODB.vn, quý khách còn được miễn phí dịch vụ quản trị, hỗ trợ tư vấn miễn phí giải pháp và hỗ trợ bảo mật máy chủ của mình.</div>
+					<div class="section01__text"><?php echo nl2br(get_field('text_01')) ?></div>
 				</div>
 			</div>
 		</section>
 		<section class="sectionPrice">
 			<div class="container">
 				<div class="sectionPrice__title title">BẢNG GIÁ DỊCH VỤ THUÊ MÁY CHỦ</div>
-				<div class="sectionPrice__list clearfix">
-					<div class="sectionPrice__item">
-						<div class="sectionPrice__inner">
-							<div class="sectionPrice__inner__title">XEON E3 SERIES</div>
-							<div class="sectionPrice__inner__info">
-								<div class="sectionPrice__inner__info__price">
-									<strong>2.850.000</strong>
-									<span>đ/tháng</span>
-								</div>
-								<div class="sectionPrice__inner__info__img">
-									<img src="<?php echo APP_ASSETS ?>img/server/ico.jpg" alt="">
-								</div>
-								<div class="sectionPrice__inner__info__text">
-									<strong>CPU:</strong> E3-1230 3.20GHz<br>
-									<strong>RAM:</strong> 4GB DDR3 ECC<br>
-									<strong>HDD:</strong> 500GB SATA2<br>
-									<strong>IP:</strong> 01 IP<br>
-									<strong>Băng thông:</strong> 100Mbps/10Mbps<br>
-									<strong>Datacenter:</strong> VDC2/ViettelIDC<br>
-									<strong>Server:</strong> DELL/SuperMicro USA
-								</div>
-								<div class="sectionPrice__inner__info__button">
-									<a href="">Đăng ký</a>
+				<?php if(!empty(get_field('price_table'))) { ?>
+					<div class="sectionPrice__list clearfix">
+						<?php foreach (get_field('price_table') as $key => $value) { ?>
+							<div class="sectionPrice__item">
+								<div class="sectionPrice__inner">
+									<div class="sectionPrice__inner__title"><?php echo $value['name'] ?></div>
+									<div class="sectionPrice__inner__info">
+										<div class="sectionPrice__inner__info__price">
+											<strong><?php echo numF($value['price']) ?></strong>
+											<span>đ/tháng</span>
+										</div>
+										<div class="sectionPrice__inner__info__img">
+											<img src="<?php echo APP_ASSETS ?>img/server/ico.jpg" alt="">
+										</div>
+										<div class="sectionPrice__inner__info__text">
+											<?php echo nl2br($value['text']) ?>
+										</div>
+										<div class="sectionPrice__inner__info__button">
+											<a href="<?php echo $value['link'] ?>">Đăng ký</a>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						<?php } ?>
 					</div>
-					<div class="sectionPrice__item">
-						<div class="sectionPrice__inner">
-							<div class="sectionPrice__inner__title">XEON 5600 SERIES</div>
-							<div class="sectionPrice__inner__info">
-								<div class="sectionPrice__inner__info__price">
-									<strong>3.950.000</strong>
-									<span>đ/tháng</span>
-								</div>
-								<div class="sectionPrice__inner__info__img">
-									<img src="<?php echo APP_ASSETS ?>img/server/ico.jpg" alt="">
-								</div>
-								<div class="sectionPrice__inner__info__text">
-									<strong>CPU:</strong> E3-1230 3.20GHz<br>
-									<strong>RAM:</strong> 4GB DDR3 ECC<br>
-									<strong>HDD:</strong> 500GB SATA2<br>
-									<strong>IP:</strong> 01 IP<br>
-									<strong>Băng thông:</strong> 100Mbps/10Mbps<br>
-									<strong>Datacenter:</strong> VDC2/ViettelIDC<br>
-									<strong>Server:</strong> DELL/SuperMicro USA
-								</div>
-								<div class="sectionPrice__inner__info__button">
-									<a href="">Đăng ký</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="sectionPrice__item">
-						<div class="sectionPrice__inner">
-							<div class="sectionPrice__inner__title">XEON E5 2600 SERIES</div>
-							<div class="sectionPrice__inner__info">
-								<div class="sectionPrice__inner__info__price">
-									<strong>4.900.000</strong>
-									<span>đ/tháng</span>
-								</div>
-								<div class="sectionPrice__inner__info__img">
-									<img src="<?php echo APP_ASSETS ?>img/server/ico.jpg" alt="">
-								</div>
-								<div class="sectionPrice__inner__info__text">
-									<strong>CPU:</strong> E3-1230 3.20GHz<br>
-									<strong>RAM:</strong> 4GB DDR3 ECC<br>
-									<strong>HDD:</strong> 500GB SATA2<br>
-									<strong>IP:</strong> 01 IP<br>
-									<strong>Băng thông:</strong> 100Mbps/10Mbps<br>
-									<strong>Datacenter:</strong> VDC2/ViettelIDC<br>
-									<strong>Server:</strong> DELL/SuperMicro USA
-								</div>
-								<div class="sectionPrice__inner__info__button">
-									<a href="">Đăng ký</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
 		</secton>
 		<section class="sectionWhy">

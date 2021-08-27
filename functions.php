@@ -1,4 +1,51 @@
 <?php
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
+define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_MODS', true);
+add_filter( 'automatic_updater_disabled', '__return_true' );
+add_filter( 'auto_update_core', '__return_false' );
+add_filter( 'auto_update_plugin', '__return_false' );
+add_filter( 'xmlrpc_enabled', '__return_false' );
+remove_action( 'wp_head', 'rsd_link' );
+function disable_self_trackback( &$links ) {
+  foreach ( $links as $l => $link )
+    if ( 0 === strpos( $link, get_option( 'home' ) ) )
+    unset($links[$l]);
+}
+add_action( 'pre_ping', 'disable_self_trackback' );
+function remove_core_updates(){
+    global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+}
+add_filter('pre_site_transient_update_core','remove_core_updates');
+add_filter('pre_site_transient_update_plugins','remove_core_updates');
+add_filter('pre_site_transient_update_themes','remove_core_updates');
+function disable_wp_head_default() {
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+  remove_action( 'wp_head', 'feed_links_extra', 3 ); // Display the links to the extra feeds such as category feeds
+  remove_action( 'wp_head', 'feed_links', 2 ); // Display the links to the general feeds: Post and Comment Feed
+  remove_action( 'wp_head', 'rsd_link' ); // Display the link to the Really Simple Discovery service endpoint, EditURI link
+  remove_action( 'wp_head', 'wlwmanifest_link' ); // Display the link to the Windows Live Writer manifest file.
+  remove_action( 'wp_head', 'index_rel_link' ); // index link
+  remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); // prev link
+  remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
+  remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // Display relational links for the posts adjacent to the current post.
+  remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that is generated on the wp_head hook, WP version
+  remove_action( 'wp_head', 'wp_resource_hints', 2 );
+  remove_action( 'wp_head', 'rest_output_link_wp_head' );
+  remove_action( 'wp_head', 'wp_shortlink_wp_head'); // remove linkn rel shortlink
+  add_filter('show_admin_bar', '__return_false');
+}
+add_action( 'init', 'disable_wp_head_default' );
+
 //本体のアップデート通知を非表示
 add_filter('pre_site_transient_update_core', create_function('$a', "return  null;"));
 //プラグイン更新通知を非表示
@@ -66,7 +113,7 @@ function thumbCrop( $img = '', $w = false, $h = false , $zc = 1, $a = false, $cc
 	$h  = ($h)  ? "&amp;h=$h"   : "";
 	$w  = ($w)  ? "&amp;w=$w"   : "";
 	$a  = ($a)  ? "&amp;a=$a"   : "";
-	$cc = ($cc) ? "&amp;cc=$cc" : "";	
+	$cc = ($cc) ? "&amp;cc=$cc" : "";
 	$img = str_replace(get_bloginfo('url'), '', $img);
 	return THEME_DIR . "/inc/timthumb.php?src={$img}{$h}{$w}&amp;zc={$zc}{$a}{$cc}";
 }
